@@ -1,0 +1,2 @@
+scrPlayerKeyboard();
+scrPlayerTouch();

@@ -1,0 +1,21 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"sprPlayerWalkL","order":3,"path":"sprites/sprPlayerWalkL/sprPlayerWalkL.yy",},
+    {"name":"scrCharMoveTo","order":1,"path":"scripts/scrCharMoveTo/scrCharMoveTo.yy",},
+    {"name":"sprPlayerWalkU","order":5,"path":"sprites/sprPlayerWalkU/sprPlayerWalkU.yy",},
+    {"name":"sprPlayerIdleDL","order":1,"path":"sprites/sprPlayerIdleDL/sprPlayerIdleDL.yy",},
+    {"name":"sprPlayerWalkDL","order":1,"path":"sprites/sprPlayerWalkDL/sprPlayerWalkDL.yy",},
+    {"name":"sprPlayerWalkR","order":4,"path":"sprites/sprPlayerWalkR/sprPlayerWalkR.yy",},
+    {"name":"scrPlayerTouch","order":1,"path":"scripts/scrPlayerTouch/scrPlayerTouch.yy",},
+    {"name":"sprPlayerWalkUL","order":6,"path":"sprites/sprPlayerWalkUL/sprPlayerWalkUL.yy",},
+    {"name":"sprPlayerIdleU","order":5,"path":"sprites/sprPlayerIdleU/sprPlayerIdleU.yy",},
+    {"name":"sprPlayerIdleDR","order":2,"path":"sprites/sprPlayerIdleDR/sprPlayerIdleDR.yy",},
+    {"name":"sprPlayerIdleR","order":4,"path":"sprites/sprPlayerIdleR/sprPlayerIdleR.yy",},
+    {"name":"sprPlayerIdleUR","order":7,"path":"sprites/sprPlayerIdleUR/sprPlayerIdleUR.yy",},
+    {"name":"sprPlayerIdleL","order":3,"path":"sprites/sprPlayerIdleL/sprPlayerIdleL.yy",},
+    {"name":"sprPlayerWalkUR","order":7,"path":"sprites/sprPlayerWalkUR/sprPlayerWalkUR.yy",},
+    {"name":"sprPlayerIdleUL","order":6,"path":"sprites/sprPlayerIdleUL/sprPlayerIdleUL.yy",},
+    {"name":"sprPlayerWalkDR","order":2,"path":"sprites/sprPlayerWalkDR/sprPlayerWalkDR.yy",},
+  ],
+}
