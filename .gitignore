@@ -1,3 +1,8 @@
+# Segredos e Configurações
+.env
+.env.local
+secrets.json
+
 # Python
 __pycache__/
 *.py[cod]

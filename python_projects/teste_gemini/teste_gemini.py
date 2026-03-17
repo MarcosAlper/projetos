@@ -1,8 +1,22 @@
+import os
 from google import genai
 import sys
 
-# Configuração do Cliente
-client = genai.Client(api_key="AIzaSyAXe1PoDB61uiauIiQpS3bWZF9LmKzPJ_Q")
+# Busca a chave na memória do terminal
+# O os.getenv busca exatamente a variável definida no PowerShell
+api_key_sistema = os.getenv("GEMINI_API_KEY")
+
+
+# Verificação de segurança (Caso eu esqueça de colar a chave no terminal)
+if not api_key_sistema:
+    print("""
+          Erro: Chave API não encontrada no sistema.
+          Use o comando: $env:GEMINI_API_KEY = 'sua_chave' no terminal PowerShell
+          """)
+    sys.exit()
+
+# Configuração do Cliente usando a variável da memória
+client = genai.Client(api_key=api_key_sistema)
 
 # Iniciando a sessão de chat com o modelo que funcionou para você
 chat = client.chats.create(model="gemini-flash-lite-latest")
