@@ -1,0 +1,39 @@
+name: Sincronizar Historico GDD
+
+on:
+  # Roda a cada madrugada, por exemplo (00:00 UTC)
+  schedule:
+    - cron: '0 3 * * *'
+  # Permite rodar manualmente na aba 'Actions'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (necessário para o Google Sheets Action)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar a Action e Dependências
+        run: npm install google-sheets-api-v3 xlsx-to-json
+
+      - name: Executar Script de Sincronização
+        env:
+          SHEET_ID: 'SEU_ID_DA_PLANILHA' # Pegue da URL do Sheets (depois de /d/)
+          GDD_FILE: 'GDD.md'
+          SHEET_TAB: 'Histórico de Revisão' # Nome da aba exato
+          EMAIL: ${{ secrets.SHEETS_CLIENT_EMAIL }}
+          PRIVATE_KEY: ${{ secrets.SHEETS_PRIVATE_KEY }}
+        run: node .github/scripts/sync_script.js
+        
+      - name: Commit das Alterações
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: 'GitHub GDD Bot'
+          message: 'docs: Atualização automática do Histórico de Revisão do GDD'
+          add: 'GDD.md'
