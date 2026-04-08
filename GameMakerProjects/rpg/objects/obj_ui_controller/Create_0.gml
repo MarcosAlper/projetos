@@ -17,6 +17,16 @@ bar_height = 32;
 margin_x = 16;
 margin_y = 16;
 
+if (!variable_global_exists("show_final_screen"))
+{
+    global.show_final_screen = false;
+}
+
+btn_attack_size = 175;
+
+btn_attack_x = 0;
+btn_attack_y = 0;
+
 // Variáveis para a Tela Final (Movidas do Draw do Player)
 // Processamos isso aqui UMA VEZ, em vez de todo frame no Draw
 final_message_list = [

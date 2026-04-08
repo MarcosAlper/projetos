@@ -1,30 +1,3 @@
-if (!variable_global_exists("show_final_screen"))
-{
-    global.show_final_screen = false;
-}
-
-dialog_cooldown = 0;
-input_block = false;
-
-btn_attack_visible = false;
-btn_attack_timer = 0;
-btn_attack_timeout = 180;
-
-joystick = {
-    finger: -1,
-    anchorx: 0,
-    anchory: 0,
-    x: 0,
-    y: 0,
-    max_distance: 80
-};
-
-btn_attack_finger = -1
-btn_attack_size = 175;
-
-btn_attack_x = 0;
-btn_attack_y = 0;
-
 move_speed = 1;
 global.player_history_size = 40;
 global.player_history = array_create(global.player_history_size, [0, 0]); 
@@ -41,6 +14,9 @@ facing = 0;
 level = 1;
 xp = 0;
 xp_require = 100;
+
+// Atalho para o obj_ui_controller
+ui = instance_find(obj_ui_controller, 0);
 
 function add_xp(_xp_to_add)
 {

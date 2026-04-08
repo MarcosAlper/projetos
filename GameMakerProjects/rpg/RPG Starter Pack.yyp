@@ -48,6 +48,7 @@
     {"id":{"name":"obj_enemy3","path":"objects/obj_enemy3/obj_enemy3.yy",},},
     {"id":{"name":"obj_enemy4","path":"objects/obj_enemy4/obj_enemy4.yy",},},
     {"id":{"name":"obj_exclamation","path":"objects/obj_exclamation/obj_exclamation.yy",},},
+    {"id":{"name":"obj_input_manageer","path":"objects/obj_input_manageer/obj_input_manageer.yy",},},
     {"id":{"name":"obj_morcego","path":"objects/obj_morcego/obj_morcego.yy",},},
     {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},},
     {"id":{"name":"obj_npc1","path":"objects/obj_npc1/obj_npc1.yy",},},

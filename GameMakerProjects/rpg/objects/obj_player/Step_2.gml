@@ -1,6 +1,10 @@
-if (global.show_final_screen) 
-{
-    exit;
+if (global.show_final_screen) exit;
+
+// SEGURANÇA: Se não encontrar obj_ui_controller (ui),
+//não executa o código
+if (!instance_exists(ui)) {
+    ui = instance_find(obj_ui_controller, 0);
+    if (!instance_exists(ui)) exit;
 }
 
 if (instance_exists(obj_dialog))
@@ -11,8 +15,8 @@ if (instance_exists(obj_dialog))
 }
 
 
-var _btn_x = display_get_gui_width() - 200;
-var _btn_y = display_get_gui_height() - 150;
+var _btn_x = ui.gui_width - 200;
+var _btn_y = ui.gui_width - 150;
 var _half_size = btn_attack_size / 2;
 var _left = _btn_x - _half_size;
 var _top = _btn_y - _half_size;
